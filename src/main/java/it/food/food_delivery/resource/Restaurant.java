@@ -32,7 +32,7 @@ public class Restaurant {
      *               the description of the restaurant.
 
      */
-    public Sagra(final int id, final String name, final String city, final String address, final String description)
+    public Restaurant(final int id, final String name, final String city, final String address, final String description)
     {
         this.id = id;
         this.name = name;

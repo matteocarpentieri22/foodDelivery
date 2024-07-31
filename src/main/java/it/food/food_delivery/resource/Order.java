@@ -1,4 +1,4 @@
-package it.unipd.dei.sagrone.resource;
+package it.food.food_delivery.resource;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.List;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import it.unipd.dei.sagrone.resource.OrderContent;
+import it.food.food_delivery.resource.OrderContent;
 
 /** This class describes an order */
 
@@ -84,7 +84,7 @@ public class Order extends AbstractResource{
         this.order_date = order_date;
         this.collection_date = collection_date;
         this.silverware = silverware;
-        this.box_type = box.type;
+        this.box_type = box_type;
         this.user_id = user_id;
         this.order_content = null;
 
@@ -121,7 +121,7 @@ public class Order extends AbstractResource{
         this.order_date = order_date;
         this.collection_date = collection_date;
         this.silverware = silverware;
-        this.box_type = box.type;
+        this.box_type = box_type;
         this.user_id = user_id;
         this.order_content = order_content;
     }

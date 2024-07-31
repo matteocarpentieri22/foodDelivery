@@ -77,7 +77,7 @@ public final class LoginUserDAO extends AbstractDAO<List<User>>{
             rs = pstmt.executeQuery();
 
             while(rs.next()) {
-                users.add( new User(rs.getString("username"), rs.getString("password"),rs.getString("email"),rs.getString("phone_number"));
+                users.add( new User(rs.getString("username"), rs.getString("password"),rs.getString("email"),rs.getString("phone_number")));
             }
             LOGGER.info("User %s is successfully searched.", username);
         } finally {

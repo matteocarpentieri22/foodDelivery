@@ -57,7 +57,7 @@ public final class DeleteProductDAO extends AbstractDAO {
         outputParam = false;
         try (PreparedStatement sql_template = con.prepareStatement(STATEMENT)) {
             sql_template.setString(1, name);
-            sql_template.setInt(2, id_sagra);
+            sql_template.setInt(2, id_restaurant);
 
             // The output parameter is modified only for a double check
             outputParam = sql_template.executeUpdate() == 1;

@@ -65,11 +65,11 @@ public final class LoadProductPhotoDAO extends AbstractDAO<Product> {
 
             if (rs.next()) {
                 p = new Product(null, -1, null, Double.MIN_VALUE, false,
-                        false, null, rs.getBytes("photo"), rs.getString("photo_type"));
+                        null, rs.getBytes("photo"), rs.getString("photo_type"));
 
                 LOGGER.info("Photo for product %s successfully loaded.", name);
             } else {
-                LOGGER.warn("Product %s for sagra %d not found.", name,id_sagra);
+                LOGGER.warn("Product %s for sagra %d not found.", name,id_restaurant);
                 throw new SQLException(String.format("Product %s for sagra %d not found.", name,id_restaurant), "NOT_FOUND");
             }
 

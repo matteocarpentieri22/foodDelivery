@@ -1,5 +1,4 @@
-package it.unipd.dei.sagrone.resource;
-
+package it.food.food_delivery.resource;
 import com.fasterxml.jackson.core.JsonGenerator;
 
 import java.io.IOException;

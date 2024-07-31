@@ -18,7 +18,7 @@ import java.util.List;
  * @version 1.00
  * @since 1.00
  */
-public class SearchAllAvailableProductByrestaurantDAO extends AbstractDAO<List<Product>>{
+public class SearchAllAvailableProductByRestaurantDAO extends AbstractDAO<List<Product>>{
     /**
      * The SQL statement to be executed
      */

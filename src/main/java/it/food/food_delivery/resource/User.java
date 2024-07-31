@@ -127,6 +127,8 @@ public class User {
         this.password=null;
         if(id < 0) throw new IllegalArgumentException("Invalid user id provided!");                                      // for int implementation.
         this.id = id;
+        this.email = "";
+        this.phone_number = ""; 
     }
 
     /**
@@ -141,17 +143,14 @@ public class User {
      *
      * @throws IllegalArgumentException if the user's identifier is invalid.
      */
-    public User(final int id_sagra, final int id) throws IllegalArgumentException
+    public User(final int id) throws IllegalArgumentException
     {
         this.username = null;
         this.password = null;
-        //if(id_sagra==null || id_sagra.isEmpty() || id_sagra.isBlank()) throw new IllegalArgumentException("Invalid id_sagra provided!");  // FOR Integer OBJ
-        if(id_sagra < 0) throw new IllegalArgumentException("Invalid id_sagra provided!");                                                  // for int implementation.
-        this.id_sagra = id_sagra;
-        this.admin=false;                   //HARDCODED TO PREVENT DELETING ADMINS!
-        //if(id==null || id.isEmpty() || id.isBlank()) throw new IllegalArgumentException("Invalid user id provided!");  // FOR Integer OBJ
         if(id < 0) throw new IllegalArgumentException("Invalid user id provided!");                                      // for int implementation.
         this.id = id;
+        this.email = "";
+        this.phone_number = ""; 
     }
 
     /**
@@ -169,7 +168,7 @@ public class User {
      *
      * @return the email.
      */
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
@@ -178,7 +177,7 @@ public class User {
      *
      * @return the phone_number.
      */
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phone_number;
     }
 
