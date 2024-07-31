@@ -1,0 +1,6 @@
+resource/OrderContent.class
+resource/Order.class
+resource/Resource.class
+resource/AbstractResource.class
+resource/Product.class
+resource/Category.class
