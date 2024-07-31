@@ -40,9 +40,8 @@ CREATE TABLE food_delivery.order(
     phone_number VARCHAR(20) NOT NULL,
     email VARCHAR(50),
     id_admin INT,                            -- NULL = not payed
-    order_date DATE,
-    order_time TIMESTAMP WITH TIME ZONE,
-    collection_date DATE,
+    order_date TIMESTAMP WITH TIME ZONE,
+    collection_date TIMESTAMP WITH TIME ZONE,
     silverware BOOL NOT NULL,
     box_type INT NOT NULL,
     user_id INT,    

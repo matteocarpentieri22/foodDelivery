@@ -24,16 +24,13 @@ public class Product extends AbstractResource {
     private final String name;
 
     /** The id of the Sagra that contains this particular product  */
-    private final int id_sagra;
+    private final int id_restaurant;
 
     /** The description of a product */
     private final String description;
 
     /** The price for a product */
     private final double price;
-
-    /** Specifies whether the product belongs to the bar */
-    private final boolean bar;
 
     /** Specifies whether the product is available  */
     private final boolean available;
@@ -66,13 +63,12 @@ public class Product extends AbstractResource {
      * @param photo: photo of the product
      * @param photo_type: format of the photo
      */
-    public Product(final String name, final int id_sagra, String description, double price, boolean bar, boolean available, final String category, byte[] photo, final String photo_type){
+    public Product(final String name, final int id_restaurant, String description, double price, boolean available, final String category, byte[] photo, final String photo_type){
 
         this.name=name;
-        this.id_sagra=id_sagra;
+        this.id_restaurant=id_restaurant;
         this.description=description;
         this.price=price;
-        this.bar=bar;
         this.available=available;
         this.category=category;
         this.photo=photo;
@@ -94,13 +90,12 @@ public class Product extends AbstractResource {
      * @param photo_type: format of the photo
      * @param photoPath : the path of the photo to retrieve on the server.
      */
-    public Product(final String name, final int id_sagra, String description, double price, boolean bar, boolean available, final String category, byte[] photo, final String photo_type, final String photoPath){
+    public Product(final String name, final int id_restaurant, String description, double price, boolean available, final String category, byte[] photo, final String photo_type, final String photoPath){
 
         this.name=name;
-        this.id_sagra=id_sagra;
+        this.id_restaurant=id_restaurant;
         this.description=description;
         this.price=price;
-        this.bar=bar;
         this.available=available;
         this.category=category;
         this.photo=photo;
@@ -119,7 +114,7 @@ public class Product extends AbstractResource {
      * Return the sagra id that offers the product
      * @return id_sagra
      */
-    public final int getIdSagra(){ return id_sagra;}
+    public final int getIdRestaurant(){ return id_restaurant;}
 
     /**
      * Return the product description
@@ -135,18 +130,6 @@ public class Product extends AbstractResource {
      */
     public double getPrice(){ return price;}
 
-
-    /**
-     * Return a boolean that specifies whether the product is offered by the bar
-     * @return {@code true} if the {@code Product} is managed by the bar.
-     */
-    public boolean getBar(){ return bar;}
-
-    /**
-     * Returns the value of the bar attribute of a {@code Product}.
-     * @return {@code true} if the {@code Product} is managed by the bar.
-     */
-    public boolean isBar(){ return bar;}
 
     /**
      * Return a boolean that specifies whether the product is available
@@ -220,13 +203,11 @@ public class Product extends AbstractResource {
 
         if(name != null) jg.writeStringField("name", name);
 
-        if(id_sagra >0) jg.writeNumberField("id_sagra", id_sagra);
+        if(id_restaurant >0) jg.writeNumberField("id_sagra", id_restaurant);
 
         if(description!=null) jg.writeStringField("description", description);
 
         if(price>=0) jg.writeNumberField("price", price);
-
-        jg.writeBooleanField("bar", bar);
 
         jg.writeBooleanField("available", available);
 
@@ -235,8 +216,6 @@ public class Product extends AbstractResource {
         if(this.hasPhoto() && photoPath != null) {
             jg.writeStringField("photo",  photoPath);
         }
-
-
 
         jg.writeEndObject();
 
@@ -258,10 +237,9 @@ public class Product extends AbstractResource {
 
         // the fields read from JSON
         String jName=null;
-        int jId_sagra=-1;
+        int jId_restaurant=-1;
         String jDescription=null;
         double jPrice=-1;
-        boolean jBar=false;
         boolean jAvailable=false;
         String jCategory=null;
         String jPhoto = null;
@@ -292,7 +270,7 @@ public class Product extends AbstractResource {
                             break;
                         case "id_sagra":
                             jp.nextToken();
-                            jId_sagra= jp.getIntValue();
+                            jId_restaurant= jp.getIntValue();
                             break;
                         case "descripton":
                             jp.nextToken();
@@ -301,10 +279,6 @@ public class Product extends AbstractResource {
                         case "price":
                             jp.nextToken();
                             jPrice= jp.getDoubleValue();
-                            break;
-                        case "bar":
-                            jp.nextToken();
-                            jBar= jp.getBooleanValue();
                             break;
                         case "available":
                             jp.nextToken();
@@ -335,7 +309,7 @@ public class Product extends AbstractResource {
         if(jPhoto != "" && jPhoto != null) decodedPhoto=Base64.getDecoder().decode(jPhoto);
         if(jPhoto_type == "" ) jPhoto_type=null;
 
-        return new Product(jName, jId_sagra, jDescription, jPrice, jBar, jAvailable, jCategory, decodedPhoto, jPhoto_type);
+        return new Product(jName, jId_restaurant, jDescription, jPrice, jAvailable, jCategory, decodedPhoto, jPhoto_type);
     }
 
 
