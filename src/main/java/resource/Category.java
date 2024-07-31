@@ -1,10 +1,9 @@
-package it.unipd.dei.sagrone.resource;
+package resource;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Base64;
 
 /**
  * Represents the data about a category of products

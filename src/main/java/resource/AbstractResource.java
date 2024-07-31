@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package it.unipd.dei.sagrone.resource;
+package resource;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;

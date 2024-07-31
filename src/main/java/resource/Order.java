@@ -1,4 +1,4 @@
-package it.unipd.dei.sagrone.resource;
+package resource;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -6,13 +6,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import it.unipd.dei.sagrone.resource.OrderContent;
+import resource.OrderContent;
 
 /** This class describes an order */
 
@@ -44,7 +43,7 @@ public class Order extends AbstractResource{
 
     /** If the customer wants the silverware */
     private final boolean silverware;
-    
+
     /** the preference of the customer about the box_type */
     private final int box_type;
 
@@ -60,18 +59,24 @@ public class Order extends AbstractResource{
      * 	           the identifier of the order
      *  @param client_name
      * 	             the client's name.
+     *  @param client_surname
+     * 	             the client's surname.
+     *  @param phone_number
+     * 	             the client's phone number.
      * 	@param email
      * 	             The email of the user.
-     *  @param client_num
-     *               The Number of people.
-     *  @param table_number
-     *               The table number.
-     *  @param id_user
-     *               The identifier of the user.
-     *  @param order_time
+     *  @param id_admin
+     *               The identifier of the admin.
+     *  @param order_date
      *               The timestamp of the order.
-     *  @param payment_time
-     *               The timestamp of the payment.
+     *  @param collection_date
+     *               The timestamp of the collection date.
+     *  @param silverware
+     *               If the customer wants the silverware
+     *  @param box_type
+     *               The type of the box.
+     *  @param user_id
+     *               The client's id.
      */
     public Order(final int id, final String client_name, final String client_surname, final String phone_number, final String email, final int id_admin, final Timestamp order_date, final Timestamp collection_date, final boolean silverware, final int box_type, final int user_id)
     {
@@ -84,7 +89,7 @@ public class Order extends AbstractResource{
         this.order_date = order_date;
         this.collection_date = collection_date;
         this.silverware = silverware;
-        this.box_type = box.type;
+        this.box_type = box_type;
         this.user_id = user_id;
         this.order_content = null;
 
@@ -95,20 +100,24 @@ public class Order extends AbstractResource{
      * 	           the identifier of the order
      *  @param client_name
      * 	             the client's name.
+     *  @param client_surname
+     * 	             the client's surname.
+     *  @param phone_number
+     * 	             the client's phone number.
      * 	@param email
      * 	             The email of the user.
-     *  @param client_num
-     *               The Number of people.
-     *  @param table_number
-     *               The table number.
-     *  @param id_user
-     *               The identifier of the user.
-     *  @param order_time
+     *  @param id_admin
+     *               The identifier of the admin.
+     *  @param order_date
      *               The timestamp of the order.
-     *  @param payment_time
-     *               The timestamp of the payment.
-     *  @param order_content
-     *               The list of Order-Content.
+     *  @param collection_date
+     *               The timestamp of the collection date.
+     *  @param silverware
+     *               If the customer wants the silverware
+     *  @param box_type
+     *               The type of the box.
+     *  @param user_id
+     *               The client's id.
      */
   public Order(final int id, final String client_name, final String client_surname, final String phone_number, final String email, final int id_admin, final Timestamp order_date, final Timestamp collection_date, final boolean silverware, final int box_type, final int user_id, final List<OrderContent> order_content)
     {
@@ -121,7 +130,7 @@ public class Order extends AbstractResource{
         this.order_date = order_date;
         this.collection_date = collection_date;
         this.silverware = silverware;
-        this.box_type = box.type;
+        this.box_type = box_type;
         this.user_id = user_id;
         this.order_content = order_content;
     }
@@ -164,7 +173,7 @@ public class Order extends AbstractResource{
      */
     public final String getEmail() {return email;}
 
-  
+
     /**
      * Return the identifier of the user.
      *
@@ -242,7 +251,7 @@ public class Order extends AbstractResource{
         if(client_surname != null) jg.writeStringField("client_surname", client_surname);
         if(phone_number != null) jg.writeStringField("phone_number", phone_number);
         if(email != null) jg.writeStringField("email", email);
-    
+
         if(order_content!=null){
             jg.flush();
             jg.writeFieldName("content");
@@ -329,7 +338,7 @@ public class Order extends AbstractResource{
                         case "email":
                             jp.nextToken();
                             jEmail = jp.getText();
-                            break;   
+                            break;
                         case "content":
                             jOrder_content=parseOrderContent(jp);
                             break;

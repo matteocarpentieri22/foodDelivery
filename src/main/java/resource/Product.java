@@ -1,4 +1,4 @@
-package it.unipd.dei.sagrone.resource;
+package resource;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
@@ -54,10 +54,9 @@ public class Product extends AbstractResource {
     /**
      * Creates a new product object
      * @param name: name of the product
-     * @param id_sagra: sagra id
+     * @param id_restaurant: sagra id
      * @param description: product description
      * @param price: product price
-     * @param bar: specifies whether the product belongs to the bar
      * @param available: specifies whether the product is available
      * @param category: prodoct category
      * @param photo: photo of the product
@@ -80,10 +79,8 @@ public class Product extends AbstractResource {
     /**
      * Creates a new product object given also the photoPath
      * @param name: name of the product
-     * @param id_sagra: sagra id
      * @param description: product description
      * @param price: product price
-     * @param bar: specifies whether the product belongs to the bar
      * @param available: specifies whether the product is available
      * @param category: prodoct category
      * @param photo: photo of the product
