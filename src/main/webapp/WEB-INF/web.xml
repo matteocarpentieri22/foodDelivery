@@ -1,10 +1,9 @@
-<web-app id="foodDelivery" version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+<web-app id="foodDelivery" version="6.0"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
-
     <display-name>food_delivery</display-name>
     <description>Application that allows to manage the menu and the orders of a restaurant.</description>
-
     <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>it.food.food_delivery.servlet.TestServlet</servlet-class>
@@ -15,4 +14,3 @@
     </servlet-mapping>
 </web-app>
 
-</web-app>
