@@ -5,12 +5,12 @@
     <display-name>food_delivery</display-name>
     <description>Application that allows to manage the menu and the orders of a restaurant.</description>
     <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>it.food.food_delivery.servlet.TestServlet</servlet-class>
+        <servlet-name>MenuServlet</servlet-name>
+        <servlet-class>it.food.food_delivery.servlet.MenuServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>MenuServlet</servlet-name>
+        <url-pattern></url-pattern>
     </servlet-mapping>
 </web-app>
 
