@@ -1,4 +1,5 @@
 DELETE FROM food_delivery.admin WHERE true;
+DELETE FROM food_delivery.user WHERE true;
 DELETE FROM food_delivery.restaurant WHERE true;
 DELETE FROM food_delivery.order_content WHERE true;
 DELETE FROM food_delivery.product WHERE true;

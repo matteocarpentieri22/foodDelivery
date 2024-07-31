@@ -90,10 +90,6 @@ CREATE TABLE food_delivery.order_content(
 );
 
 
-CREATE TABLE food_delivery.user(
-);
-
-
 
 
 CREATE OR REPLACE FUNCTION f_price()
