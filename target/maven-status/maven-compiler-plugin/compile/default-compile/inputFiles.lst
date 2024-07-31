@@ -4,6 +4,7 @@
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/LoadProductPhotoDAO.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/SearchCategoriesDAO.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/AbstractDAO.java
+/home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/servlet/TestServlet.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/DeleteOrderDAO.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/Actions.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/LogContext.java
@@ -14,16 +15,11 @@
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/Message.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/package-info.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/Product.java
-/home/riccardo/food-delivery/foodDelivery/src/main/java/resource/OrderContent.java
-/home/riccardo/food-delivery/foodDelivery/src/main/java/resource/AbstractResource.java
-/home/riccardo/food-delivery/foodDelivery/src/main/java/resource/Resource.java
-/home/riccardo/food-delivery/foodDelivery/src/main/java/resource/Product.java
+/home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/servlet/package-info.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/SearchAllAvailableProductByRestaurantDAO.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/ResourceList.java
-/home/riccardo/food-delivery/foodDelivery/src/main/java/resource/Category.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/Restaurant.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/LoginUserDAO.java
-/home/riccardo/food-delivery/foodDelivery/src/main/java/resource/Order.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/DataAccessObject.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/database/package-info.java
 /home/riccardo/food-delivery/foodDelivery/src/main/java/it/food/food_delivery/resource/Order.java
