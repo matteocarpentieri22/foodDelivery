@@ -21,7 +21,7 @@ public final class SearchCategoriesDAO extends AbstractDAO<List<Category>>{
     /**
      * The SQL statement to be executed
      */
-    private static final String STATEMENT = "SELECT name FROM food_deliverys.category";
+    private static final String STATEMENT = "SELECT name FROM food_delivery.category";
 
     /**
      * Creates a new object for searching the categories.

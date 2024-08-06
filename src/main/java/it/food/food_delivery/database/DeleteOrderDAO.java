@@ -5,13 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-/**
- * Deletes an order from the Order and OrderContent tables.
- *
- * @author Fincato Saverio (fincatosaverio@gmail.com)
- * @version 1.00
- * @since 1.00
- */
 public final class DeleteOrderDAO extends AbstractDAO {
     /**
      * SQL statement template to delete an order in Order table.

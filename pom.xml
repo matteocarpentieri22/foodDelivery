@@ -89,7 +89,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
-                </configuration>
+                </configuration>    
             </plugin>
         </plugins>
     </build>
